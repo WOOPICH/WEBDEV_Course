@@ -1,19 +1,94 @@
-#content{
-  width: 54%;
-  float: left;
-  margin-right: 3%;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
-#sidebar-left{
-  width: 20%;
-  float: left;
-  margin-right: 3%;
+header {
+  padding: 10px;
+  text-align: center;
+  background: #add548;
+  color: white;
+  font-size: 15px;
+  width: 108%;
 }
 
-#sidebar-right{
-  width: 20%;
-  float: left;
+.parallax-container {
+  position: relative;
+  display: flex;
+  height: 110%;
+  width: 110%;
+  overflow: hidden;
+  z-index: 0;
 }
-.sidebar-nav{
-  display: none;
+
+.bg {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background-image: url('imgs/map.jpg');
+  width: 110%;
+  height: 110%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.pics {
+  display: inline-block;
+  position: absolute;
+  width: 512px;
+  height: 512px;
+  opacity: 1;
+  transition: 0.3s;
+  z-index: 1;
+  transform: scale(0.5, 0.5);
+  transition: 1000ms;
+}
+
+@media screen and (max-width: 500px) {
+.pics{
+  transform: scale(0.2, 0.2);
+}
+}
+
+.pics:hover {
+  transform: translateY(-10px);
+  transition: 1000ms;
+  transform: scale(0.6, 0.6);
+  opacity: 0.9;
+}
+
+#n1 {
+  background-image: url('imgs/char1.png');
+  top: 10%;
+  left: 1%;
+}
+#n2 {
+  background-image: url('imgs/char2.png');
+  top: 30%;
+  left: 30%;
+}
+#n3 {
+  background-image: url('imgs/char3.png');
+  top: 10%;
+  left: 50%;
+}
+.innerText {
+  background-color: white;
+  margin: 0;
+  position: relative;
+  width: 80%;
+  left: 100%;
+  border-radius: 20%;
+  border-width: thick;
+  border-style: solid;
+  border-color: blue;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+  font-size: 45px;
 }
